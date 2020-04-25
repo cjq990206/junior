@@ -1,0 +1,30 @@
+\section{系统功能性需求分析}
+
+\begin{figure}[!htb]
+	\centering
+	\includegraphics[scale=1]{image/logo1.png}
+	\caption{北京交通大学校徽}
+\end{figure}
+
+
+
+\begin{longtable}[c]{c|ccc}
+	\caption{用户登录用例表}
+	\label{tab:my-table}\\
+	\shline
+	\multicolumn{1}{c|}{\textbf{用例编号}} & \multicolumn{1}{c|}{UC-01} & \multicolumn{1}{c|}{用例名称} &  用户登录\\ \hline
+	\endhead
+	%
+	\multicolumn{1}{c|}{\textbf{活动者}} & \multicolumn{1}{c|}{用户} & \multicolumn{1}{c|}{优先级} &高  \\ \hline
+	\textbf{用例描述} & \multicolumn{3}{p{12cm}}{该用例用来描述用户打开平台首页页面后，状态为未登录的用户通过输入账号和密码进行登录操作，系统将在登录过程中对用户账号及密码的正确性进行验证，并判断用户为个人用户还是企业用户，在登录后根据不同的账号类型在部分页面进行不同的页面显示。} \\ \hline
+	\textbf{前置条件}& \multicolumn{3}{p{12cm}}{用户通过浏览器输入平台地址。} \\ \hline
+	\textbf{基本事件流}& \multicolumn{3}{p{12cm}}{用户打开浏览器，在地址栏输入平台网址；\newline
+		打开平台，展示平台首页；\newline
+		用户账号为未登录状态，点击登录；\newline
+		展示登录页面；\newline
+		输入用户账号和密码进行验证。} \\ \hline
+	\textbf{异常事件流}& \multicolumn{3}{p{12cm}}{1.网址URL 输入错误，打开平台首页失败；\newline
+		2.用户账号或密码错误，登录失败。
+	} \\ \hline
+	\textbf{后置条件}& \multicolumn{3}{p{12cm}}{页面由登录页面回到首页，用户登录状态为已登录。} \\ \shline
+\end{longtable}

@@ -1,0 +1,65 @@
+\documentclass[article]{BJTU-thesis}
+\usepackage{url}
+\usepackage{booktabs}
+\usepackage{colortbl}
+\usepackage{threeparttable}
+\usepackage{longtable}
+\usepackage{makecell}
+\usepackage{multirow}
+\definecolor{tabcolor}{rgb}{.867,.914,.960}
+\definecolor{linecolor}{rgb}{.469,.676,.859}
+\definecolor{keywordcolor}{rgb}{.949,.800,.851}
+\setcounter{tocdepth}{4}
+\setcounter{secnumdepth}{4}
+\hypersetup{hidelinks}
+
+\usepackage{array}
+\newcolumntype{I}{!{\vrule width 3pt}}
+\newlength\savedwidth
+\newcommand\whline{\noalign{\global\savedwidth\arrayrulewidth
+		\global\arrayrulewidth 3pt}%
+	\hline
+	\noalign{\global\arrayrulewidth\savedwidth}}
+\newlength\savewidth
+\newcommand\shline{\noalign{\global\savewidth\arrayrulewidth
+		\global\arrayrulewidth 1.5pt}%
+	\hline
+	\noalign{\global\arrayrulewidth\savewidth}}
+
+\renewcommand\thesection{\arabic {section}}
+\renewcommand\thefigure{\arabic {figure}}
+%%%%%%%%%%%%%%%填写封面信息%%%%%%%%%%%%%%%%%%%%
+\authora{汤新宇  17301137}
+\authorb{王心蕊  17301048}
+\authorc{陈嘉琪  17301060}
+\authord{唐{\color{white}哈}麒  17301138}
+\authorf{张钰铎  17301145}
+\comment{同{\color{white}哈}等{\color{white}哈}贡{\color{white}哈}献}
+%\studentNumber{16121248}
+\advisor{李{\color{white}哈}宇}
+%\advisorTitle{教授}
+%\degreeType{学术型}
+%\major{机械制造}
+%\researchArea{切削力分析}
+\subject{软件构思综合训练}
+\title{影视舆情分析系统}
+\documentname{需求规格说明书}
+\bibliographystyle{unsrt} % BibTex
+%\englishtitle{The Path Planning of Blade Machining Tool Based on Cutting Force Analysis.}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\setmainfont{Times New Roman}
+%\bibliographystyle{unsrt} % BibTex
+\begin{document}
+	\makecover
+	
+	\tableofcontents
+	\newpage
+
+	\newpage
+	\setcounter{page}{1}
+	\input{chapters/business.tex}
+	\input{chapters/user.tex}
+	\input{chapters/function.tex}
+	\input{chapters/nonfunction.tex}
+	
+\end{document}
