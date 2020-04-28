@@ -127,7 +127,7 @@
 \end{longtable}
 
 \begin{longtable}[c]{c|ccc}
-	\caption{查看账号基本信息用例表}
+	\caption{查看历史浏览数据用例表}
 	\label{tab:tab6}\\
 	\shline
 	\multicolumn{1}{c|}{\textbf{用例编号}} & \multicolumn{1}{c|}{UC-01} & \multicolumn{1}{c|}{用例名称} &  用户登录\\ \hline
@@ -148,7 +148,7 @@
 \end{longtable}
 
 \begin{longtable}[c]{c|ccc}
-	\caption{查看历史浏览数据用例表}
+	\caption{查看近期关注用例表}
 	\label{tab:tab7}\\
 	\shline
 	\multicolumn{1}{c|}{\textbf{用例编号}} & \multicolumn{1}{c|}{UC-01} & \multicolumn{1}{c|}{用例名称} &  用户登录\\ \hline
@@ -169,7 +169,7 @@
 \end{longtable}
 
 \begin{longtable}[c]{c|ccc}
-	\caption{查看近期关注用例表}
+	\caption{查看系统消息}
 	\label{tab:tab8}\\
 	\shline
 	\multicolumn{1}{c|}{\textbf{用例编号}} & \multicolumn{1}{c|}{UC-01} & \multicolumn{1}{c|}{用例名称} &  用户登录\\ \hline
@@ -232,5 +232,142 @@
 \end{longtable}
 
 \subsection{个人用户页面}
+购买个人服务的用户，可以通过平台首页进入个人用户页面，而未获得此项服务的用户（或游客账号）在点击首页入口时，则会由于权限认证失败而收到邀请购买服务的询问。在进入个人用户页面后，用户可以通过平台提供的类别，如人物（导演、艺人、自媒体制作人等）和题材（电视剧、电影、综艺等）筛选热点舆情事件，也可以在搜索栏中通过关键词进行筛选。在点击相关词条后，可以进入舆情事件的详情界面。用户也可以根据喜好将关注的影视舆情事件参与者、影视剧作品等设为关注列表添加到该页面。用例图如\textbf{图\ref{fig:fig3}} 所示，相关用例表如\textbf{表\ref{tab:tab11}}和\textbf{表\ref{tab:tab12}} 所示。
+
+\begin{figure}[!htb]
+	\centering\label{fig:fig3}
+	\includegraphics[scale=1]{image/logo1.png}
+	\caption{个人用户页面用例图}
+\end{figure}
+
+\begin{longtable}[c]{c|ccc}
+	\caption{筛选影视舆情事件用例表}
+	\label{tab:tab11}\\
+	\shline
+	\multicolumn{1}{c|}{\textbf{用例编号}} & \multicolumn{1}{c|}{UC-01} & \multicolumn{1}{c|}{用例名称} &  用户登录\\ \hline
+	\endhead
+	%
+	\multicolumn{1}{c|}{\textbf{活动者}} & \multicolumn{1}{c|}{用户} & \multicolumn{1}{c|}{优先级} &高  \\ \hline
+	\textbf{用例描述} & \multicolumn{3}{p{12cm}}{该用例用来描述用户打开平台首页页面后，状态为未登录的用户通过输入账号和密码进行登录操作，系统将在登录过程中对用户账号及密码的正确性进行验证，并判断用户为个人用户还是企业用户，在登录后根据不同的账号类型在部分页面进行不同的页面显示。} \\ \hline
+	\textbf{前置条件}& \multicolumn{3}{p{12cm}}{用户通过浏览器输入平台地址。} \\ \hline
+	\textbf{基本事件流}& \multicolumn{3}{p{12cm}}{用户打开浏览器，在地址栏输入平台网址；\newline
+		打开平台，展示平台首页；\newline
+		用户账号为未登录状态，点击登录；\newline
+		展示登录页面；\newline
+		输入用户账号和密码进行验证。} \\ \hline
+	\textbf{异常事件流}& \multicolumn{3}{p{12cm}}{1.网址URL 输入错误，打开平台首页失败；\newline
+		2.用户账号或密码错误，登录失败。
+	} \\ \hline
+	\textbf{后置条件}& \multicolumn{3}{p{12cm}}{页面由登录页面回到首页，用户登录状态为已登录。} \\ \shline
+\end{longtable}
+
+\begin{longtable}[c]{c|ccc}
+	\caption{添加关注用例表}
+	\label{tab:tab12}\\
+	\shline
+	\multicolumn{1}{c|}{\textbf{用例编号}} & \multicolumn{1}{c|}{UC-01} & \multicolumn{1}{c|}{用例名称} &  用户登录\\ \hline
+	\endhead
+	%
+	\multicolumn{1}{c|}{\textbf{活动者}} & \multicolumn{1}{c|}{用户} & \multicolumn{1}{c|}{优先级} &高  \\ \hline
+	\textbf{用例描述} & \multicolumn{3}{p{12cm}}{该用例用来描述用户打开平台首页页面后，状态为未登录的用户通过输入账号和密码进行登录操作，系统将在登录过程中对用户账号及密码的正确性进行验证，并判断用户为个人用户还是企业用户，在登录后根据不同的账号类型在部分页面进行不同的页面显示。} \\ \hline
+	\textbf{前置条件}& \multicolumn{3}{p{12cm}}{用户通过浏览器输入平台地址。} \\ \hline
+	\textbf{基本事件流}& \multicolumn{3}{p{12cm}}{用户打开浏览器，在地址栏输入平台网址；\newline
+		打开平台，展示平台首页；\newline
+		用户账号为未登录状态，点击登录；\newline
+		展示登录页面；\newline
+		输入用户账号和密码进行验证。} \\ \hline
+	\textbf{异常事件流}& \multicolumn{3}{p{12cm}}{1.网址URL 输入错误，打开平台首页失败；\newline
+		2.用户账号或密码错误，登录失败。
+	} \\ \hline
+	\textbf{后置条件}& \multicolumn{3}{p{12cm}}{页面由登录页面回到首页，用户登录状态为已登录。} \\ \shline
+\end{longtable}
 
 \subsection{企业用户页面}
+购买企业服务的用户，可以通过平台首页进入企业用户页面，而未获得此项服务的用户（如游客账号或个人用户账号）在点击首页入口时，则会由于权限认证失败而收到邀请进行企业认证并购买服务的询问。在进入企业用户页面后，用户可以通过平台提供的类别，如人物（导演、艺人、自媒体制作人等）和题材（电视剧、电影、综艺等）筛选热点舆情事件，也可以在搜索栏中通过关键词进行筛选。在点击相关词条后，可以进入舆情事件的详情界面。用户也可以定制某一舆情事件或影视及相关人员的舆情预警、期末查看本月（或年）的舆情数据分析报告，并可以定制营销效果分析。用例图如\textbf{图\ref{fig:fig4}} 所示，相关用例表如\textbf{表\ref{tab:tab13}} 所示。
+
+\begin{figure}[!htb]
+	\centering\label{fig:fig4}
+	\includegraphics[scale=1]{image/logo1.png}
+	\caption{企业用户页面用例图}
+\end{figure}
+
+\begin{longtable}[c]{c|ccc}
+	\caption{查看分析数据用例表}
+	\label{tab:tab13}\\
+	\shline
+	\multicolumn{1}{c|}{\textbf{用例编号}} & \multicolumn{1}{c|}{UC-01} & \multicolumn{1}{c|}{用例名称} &  用户登录\\ \hline
+	\endhead
+	%
+	\multicolumn{1}{c|}{\textbf{活动者}} & \multicolumn{1}{c|}{用户} & \multicolumn{1}{c|}{优先级} &高  \\ \hline
+	\textbf{用例描述} & \multicolumn{3}{p{12cm}}{该用例用来描述用户打开平台首页页面后，状态为未登录的用户通过输入账号和密码进行登录操作，系统将在登录过程中对用户账号及密码的正确性进行验证，并判断用户为个人用户还是企业用户，在登录后根据不同的账号类型在部分页面进行不同的页面显示。} \\ \hline
+	\textbf{前置条件}& \multicolumn{3}{p{12cm}}{用户通过浏览器输入平台地址。} \\ \hline
+	\textbf{基本事件流}& \multicolumn{3}{p{12cm}}{用户打开浏览器，在地址栏输入平台网址；\newline
+		打开平台，展示平台首页；\newline
+		用户账号为未登录状态，点击登录；\newline
+		展示登录页面；\newline
+		输入用户账号和密码进行验证。} \\ \hline
+	\textbf{异常事件流}& \multicolumn{3}{p{12cm}}{1.网址URL 输入错误，打开平台首页失败；\newline
+		2.用户账号或密码错误，登录失败。
+	} \\ \hline
+	\textbf{后置条件}& \multicolumn{3}{p{12cm}}{页面由登录页面回到首页，用户登录状态为已登录。} \\ \shline
+\end{longtable}
+
+\subsection{舆情事件详情页面}
+购买平台服务的用户，在通过系统认证后，可以通过不同的功能入口进行影视舆情事筛选，并经由筛选出的词条进入详情界面查看影视参与者或影视作品的有关信息，例如事件的主要人物、人物关系图谱、事件时间轴、事件情感分析与关注度等，通过关系图谱和时间轴的结点可以查看相关信息。用例图如\textbf{图\ref{fig:fig5}} 所示，相关用例表如\textbf{表\ref{tab:tab14}} 所示。
+
+\begin{figure}[!htb]
+	\centering\label{fig:fig5}
+	\includegraphics[scale=1]{image/logo1.png}
+	\caption{舆情事件详情页面用例图}
+\end{figure}
+
+\begin{longtable}[c]{c|ccc}
+	\caption{查看舆情事件详情用例表}
+	\label{tab:tab14}\\
+	\shline
+	\multicolumn{1}{c|}{\textbf{用例编号}} & \multicolumn{1}{c|}{UC-01} & \multicolumn{1}{c|}{用例名称} &  用户登录\\ \hline
+	\endhead
+	%
+	\multicolumn{1}{c|}{\textbf{活动者}} & \multicolumn{1}{c|}{用户} & \multicolumn{1}{c|}{优先级} &高  \\ \hline
+	\textbf{用例描述} & \multicolumn{3}{p{12cm}}{该用例用来描述用户打开平台首页页面后，状态为未登录的用户通过输入账号和密码进行登录操作，系统将在登录过程中对用户账号及密码的正确性进行验证，并判断用户为个人用户还是企业用户，在登录后根据不同的账号类型在部分页面进行不同的页面显示。} \\ \hline
+	\textbf{前置条件}& \multicolumn{3}{p{12cm}}{用户通过浏览器输入平台地址。} \\ \hline
+	\textbf{基本事件流}& \multicolumn{3}{p{12cm}}{用户打开浏览器，在地址栏输入平台网址；\newline
+		打开平台，展示平台首页；\newline
+		用户账号为未登录状态，点击登录；\newline
+		展示登录页面；\newline
+		输入用户账号和密码进行验证。} \\ \hline
+	\textbf{异常事件流}& \multicolumn{3}{p{12cm}}{1.网址URL 输入错误，打开平台首页失败；\newline
+		2.用户账号或密码错误，登录失败。
+	} \\ \hline
+	\textbf{后置条件}& \multicolumn{3}{p{12cm}}{页面由登录页面回到首页，用户登录状态为已登录。} \\ \shline
+\end{longtable}
+
+\subsection{后台管理页面}
+系统后台的用户管理模块分为个人用户和企业用户。管理员需要能查询用户并管理与用户相关的信息。用例图如\textbf{图\ref{fig:fig6}} 所示，相关用例表如\textbf{表\ref{tab:tab15}} 所示。
+
+\begin{figure}[!htb]
+	\centering\label{fig:fig6}
+	\includegraphics[scale=1]{image/logo1.png}
+	\caption{后台管理页面用例图}
+\end{figure}
+
+\begin{longtable}[c]{c|ccc}
+	\caption{后台管理用例表}
+	\label{tab:tab15}\\
+	\shline
+	\multicolumn{1}{c|}{\textbf{用例编号}} & \multicolumn{1}{c|}{UC-01} & \multicolumn{1}{c|}{用例名称} &  用户登录\\ \hline
+	\endhead
+	%
+	\multicolumn{1}{c|}{\textbf{活动者}} & \multicolumn{1}{c|}{用户} & \multicolumn{1}{c|}{优先级} &高  \\ \hline
+	\textbf{用例描述} & \multicolumn{3}{p{12cm}}{该用例用来描述用户打开平台首页页面后，状态为未登录的用户通过输入账号和密码进行登录操作，系统将在登录过程中对用户账号及密码的正确性进行验证，并判断用户为个人用户还是企业用户，在登录后根据不同的账号类型在部分页面进行不同的页面显示。} \\ \hline
+	\textbf{前置条件}& \multicolumn{3}{p{12cm}}{用户通过浏览器输入平台地址。} \\ \hline
+	\textbf{基本事件流}& \multicolumn{3}{p{12cm}}{用户打开浏览器，在地址栏输入平台网址；\newline
+		打开平台，展示平台首页；\newline
+		用户账号为未登录状态，点击登录；\newline
+		展示登录页面；\newline
+		输入用户账号和密码进行验证。} \\ \hline
+	\textbf{异常事件流}& \multicolumn{3}{p{12cm}}{1.网址URL 输入错误，打开平台首页失败；\newline
+		2.用户账号或密码错误，登录失败。
+	} \\ \hline
+	\textbf{后置条件}& \multicolumn{3}{p{12cm}}{页面由登录页面回到首页，用户登录状态为已登录。} \\ \shline
+\end{longtable}
