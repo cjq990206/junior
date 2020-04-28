@@ -1,16 +1,19 @@
 \section{系统功能性需求分析}
+\subsection{前台首页}
+
+系统前台首页是平台最先展示给用户的页面，这里主要提供用户注册/登录入口、用户个人中心入口，实时展示影视舆情热点事件，并可更进一步查看某一事件的详情，以及平台的主要功能入口。平台提供的入口根据用户类别和功能需求可分为个人用户和企业用户，前者根据自身对影视舆情的兴趣浏览或搜索有关舆情事件或影视参与者及其相关信息系统，后者除了可以获取平台提供的舆情数据，还可以根据需求定制预警服务和分析报告等。前台首页的用例图如\textbf{图\ref{fig:fig1}} 所示，相关用例表如\textbf{表\ref{tab:tab1}}、\textbf{表\ref{tab:tab2}}、\textbf{表\ref{tab:tab3}}和\textbf{表\ref{tab:tab4}} 所示。
 
 \begin{figure}[!htb]
-	\centering
+	\centering\label{fig:fig1}
 	\includegraphics[scale=1]{image/logo1.png}
-	\caption{北京交通大学校徽}
+	\caption{前台首页用例图}
 \end{figure}
 
 
 
 \begin{longtable}[c]{c|ccc}
 	\caption{用户登录用例表}
-	\label{tab:my-table}\\
+	\label{tab:tab1}\\
 	\shline
 	\multicolumn{1}{c|}{\textbf{用例编号}} & \multicolumn{1}{c|}{UC-01} & \multicolumn{1}{c|}{用例名称} &  用户登录\\ \hline
 	\endhead
@@ -28,3 +31,206 @@
 	} \\ \hline
 	\textbf{后置条件}& \multicolumn{3}{p{12cm}}{页面由登录页面回到首页，用户登录状态为已登录。} \\ \shline
 \end{longtable}
+
+\begin{longtable}[c]{c|ccc}
+	\caption{平台展示实时热点影视舆情事件用例表}
+	\label{tab:tab2}\\
+	\shline
+	\multicolumn{1}{c|}{\textbf{用例编号}} & \multicolumn{1}{c|}{UC-01} & \multicolumn{1}{c|}{用例名称} &  用户登录\\ \hline
+	\endhead
+	%
+	\multicolumn{1}{c|}{\textbf{活动者}} & \multicolumn{1}{c|}{用户} & \multicolumn{1}{c|}{优先级} &高  \\ \hline
+	\textbf{用例描述} & \multicolumn{3}{p{12cm}}{该用例用来描述用户打开平台首页页面后，状态为未登录的用户通过输入账号和密码进行登录操作，系统将在登录过程中对用户账号及密码的正确性进行验证，并判断用户为个人用户还是企业用户，在登录后根据不同的账号类型在部分页面进行不同的页面显示。} \\ \hline
+	\textbf{前置条件}& \multicolumn{3}{p{12cm}}{用户通过浏览器输入平台地址。} \\ \hline
+	\textbf{基本事件流}& \multicolumn{3}{p{12cm}}{用户打开浏览器，在地址栏输入平台网址；\newline
+		打开平台，展示平台首页；\newline
+		用户账号为未登录状态，点击登录；\newline
+		展示登录页面；\newline
+		输入用户账号和密码进行验证。} \\ \hline
+	\textbf{异常事件流}& \multicolumn{3}{p{12cm}}{1.网址URL 输入错误，打开平台首页失败；\newline
+		2.用户账号或密码错误，登录失败。
+	} \\ \hline
+	\textbf{后置条件}& \multicolumn{3}{p{12cm}}{页面由登录页面回到首页，用户登录状态为已登录。} \\ \shline
+\end{longtable}
+
+\begin{longtable}[c]{c|ccc}
+	\caption{查看个人中心用例表}
+	\label{tab:tab3}\\
+	\shline
+	\multicolumn{1}{c|}{\textbf{用例编号}} & \multicolumn{1}{c|}{UC-01} & \multicolumn{1}{c|}{用例名称} &  用户登录\\ \hline
+	\endhead
+	%
+	\multicolumn{1}{c|}{\textbf{活动者}} & \multicolumn{1}{c|}{用户} & \multicolumn{1}{c|}{优先级} &高  \\ \hline
+	\textbf{用例描述} & \multicolumn{3}{p{12cm}}{该用例用来描述用户打开平台首页页面后，状态为未登录的用户通过输入账号和密码进行登录操作，系统将在登录过程中对用户账号及密码的正确性进行验证，并判断用户为个人用户还是企业用户，在登录后根据不同的账号类型在部分页面进行不同的页面显示。} \\ \hline
+	\textbf{前置条件}& \multicolumn{3}{p{12cm}}{用户通过浏览器输入平台地址。} \\ \hline
+	\textbf{基本事件流}& \multicolumn{3}{p{12cm}}{用户打开浏览器，在地址栏输入平台网址；\newline
+		打开平台，展示平台首页；\newline
+		用户账号为未登录状态，点击登录；\newline
+		展示登录页面；\newline
+		输入用户账号和密码进行验证。} \\ \hline
+	\textbf{异常事件流}& \multicolumn{3}{p{12cm}}{1.网址URL 输入错误，打开平台首页失败；\newline
+		2.用户账号或密码错误，登录失败。
+	} \\ \hline
+	\textbf{后置条件}& \multicolumn{3}{p{12cm}}{页面由登录页面回到首页，用户登录状态为已登录。} \\ \shline
+\end{longtable}
+
+\begin{longtable}[c]{c|ccc}
+	\caption{点击功能入口用例表}
+	\label{tab:tab4}\\
+	\shline
+	\multicolumn{1}{c|}{\textbf{用例编号}} & \multicolumn{1}{c|}{UC-01} & \multicolumn{1}{c|}{用例名称} &  用户登录\\ \hline
+	\endhead
+	%
+	\multicolumn{1}{c|}{\textbf{活动者}} & \multicolumn{1}{c|}{用户} & \multicolumn{1}{c|}{优先级} &高  \\ \hline
+	\textbf{用例描述} & \multicolumn{3}{p{12cm}}{该用例用来描述用户打开平台首页页面后，状态为未登录的用户通过输入账号和密码进行登录操作，系统将在登录过程中对用户账号及密码的正确性进行验证，并判断用户为个人用户还是企业用户，在登录后根据不同的账号类型在部分页面进行不同的页面显示。} \\ \hline
+	\textbf{前置条件}& \multicolumn{3}{p{12cm}}{用户通过浏览器输入平台地址。} \\ \hline
+	\textbf{基本事件流}& \multicolumn{3}{p{12cm}}{用户打开浏览器，在地址栏输入平台网址；\newline
+		打开平台，展示平台首页；\newline
+		用户账号为未登录状态，点击登录；\newline
+		展示登录页面；\newline
+		输入用户账号和密码进行验证。} \\ \hline
+	\textbf{异常事件流}& \multicolumn{3}{p{12cm}}{1.网址URL 输入错误，打开平台首页失败；\newline
+		2.用户账号或密码错误，登录失败。
+	} \\ \hline
+	\textbf{后置条件}& \multicolumn{3}{p{12cm}}{页面由登录页面回到首页，用户登录状态为已登录。} \\ \shline
+\end{longtable}
+
+\subsection{个人中心}
+
+个人中心模块需要展示用户个人账号基本信息，也可以查看一定事件段内的历史浏览记录和近期主要关注事件、人物等，并可查看相关数据。此外，还可以允许用户查看充值记录、系统消息等。企业用户还要能查看预警数据及详细说明和历史分析报告。用例图如\textbf{图\ref{fig:fig2}} 所示，相关用例表如\textbf{表\ref{tab:tab5}}、\textbf{表\ref{tab:tab6}}、\textbf{表\ref{tab:tab7}}、\textbf{表\ref{tab:tab8}}、\textbf{表\ref{tab:tab9}}和\textbf{表\ref{tab:tab10}}  所示。
+
+\begin{figure}[!htb]
+	\centering\label{fig:fig2}
+	\includegraphics[scale=1]{image/logo1.png}
+	\caption{个人中心用例图}
+\end{figure}
+
+\begin{longtable}[c]{c|ccc}
+	\caption{查看账号基本信息用例表}
+	\label{tab:tab5}\\
+	\shline
+	\multicolumn{1}{c|}{\textbf{用例编号}} & \multicolumn{1}{c|}{UC-01} & \multicolumn{1}{c|}{用例名称} &  用户登录\\ \hline
+	\endhead
+	%
+	\multicolumn{1}{c|}{\textbf{活动者}} & \multicolumn{1}{c|}{用户} & \multicolumn{1}{c|}{优先级} &高  \\ \hline
+	\textbf{用例描述} & \multicolumn{3}{p{12cm}}{该用例用来描述用户打开平台首页页面后，状态为未登录的用户通过输入账号和密码进行登录操作，系统将在登录过程中对用户账号及密码的正确性进行验证，并判断用户为个人用户还是企业用户，在登录后根据不同的账号类型在部分页面进行不同的页面显示。} \\ \hline
+	\textbf{前置条件}& \multicolumn{3}{p{12cm}}{用户通过浏览器输入平台地址。} \\ \hline
+	\textbf{基本事件流}& \multicolumn{3}{p{12cm}}{用户打开浏览器，在地址栏输入平台网址；\newline
+		打开平台，展示平台首页；\newline
+		用户账号为未登录状态，点击登录；\newline
+		展示登录页面；\newline
+		输入用户账号和密码进行验证。} \\ \hline
+	\textbf{异常事件流}& \multicolumn{3}{p{12cm}}{1.网址URL 输入错误，打开平台首页失败；\newline
+		2.用户账号或密码错误，登录失败。
+	} \\ \hline
+	\textbf{后置条件}& \multicolumn{3}{p{12cm}}{页面由登录页面回到首页，用户登录状态为已登录。} \\ \shline
+\end{longtable}
+
+\begin{longtable}[c]{c|ccc}
+	\caption{查看账号基本信息用例表}
+	\label{tab:tab6}\\
+	\shline
+	\multicolumn{1}{c|}{\textbf{用例编号}} & \multicolumn{1}{c|}{UC-01} & \multicolumn{1}{c|}{用例名称} &  用户登录\\ \hline
+	\endhead
+	%
+	\multicolumn{1}{c|}{\textbf{活动者}} & \multicolumn{1}{c|}{用户} & \multicolumn{1}{c|}{优先级} &高  \\ \hline
+	\textbf{用例描述} & \multicolumn{3}{p{12cm}}{该用例用来描述用户打开平台首页页面后，状态为未登录的用户通过输入账号和密码进行登录操作，系统将在登录过程中对用户账号及密码的正确性进行验证，并判断用户为个人用户还是企业用户，在登录后根据不同的账号类型在部分页面进行不同的页面显示。} \\ \hline
+	\textbf{前置条件}& \multicolumn{3}{p{12cm}}{用户通过浏览器输入平台地址。} \\ \hline
+	\textbf{基本事件流}& \multicolumn{3}{p{12cm}}{用户打开浏览器，在地址栏输入平台网址；\newline
+		打开平台，展示平台首页；\newline
+		用户账号为未登录状态，点击登录；\newline
+		展示登录页面；\newline
+		输入用户账号和密码进行验证。} \\ \hline
+	\textbf{异常事件流}& \multicolumn{3}{p{12cm}}{1.网址URL 输入错误，打开平台首页失败；\newline
+		2.用户账号或密码错误，登录失败。
+	} \\ \hline
+	\textbf{后置条件}& \multicolumn{3}{p{12cm}}{页面由登录页面回到首页，用户登录状态为已登录。} \\ \shline
+\end{longtable}
+
+\begin{longtable}[c]{c|ccc}
+	\caption{查看历史浏览数据用例表}
+	\label{tab:tab7}\\
+	\shline
+	\multicolumn{1}{c|}{\textbf{用例编号}} & \multicolumn{1}{c|}{UC-01} & \multicolumn{1}{c|}{用例名称} &  用户登录\\ \hline
+	\endhead
+	%
+	\multicolumn{1}{c|}{\textbf{活动者}} & \multicolumn{1}{c|}{用户} & \multicolumn{1}{c|}{优先级} &高  \\ \hline
+	\textbf{用例描述} & \multicolumn{3}{p{12cm}}{该用例用来描述用户打开平台首页页面后，状态为未登录的用户通过输入账号和密码进行登录操作，系统将在登录过程中对用户账号及密码的正确性进行验证，并判断用户为个人用户还是企业用户，在登录后根据不同的账号类型在部分页面进行不同的页面显示。} \\ \hline
+	\textbf{前置条件}& \multicolumn{3}{p{12cm}}{用户通过浏览器输入平台地址。} \\ \hline
+	\textbf{基本事件流}& \multicolumn{3}{p{12cm}}{用户打开浏览器，在地址栏输入平台网址；\newline
+		打开平台，展示平台首页；\newline
+		用户账号为未登录状态，点击登录；\newline
+		展示登录页面；\newline
+		输入用户账号和密码进行验证。} \\ \hline
+	\textbf{异常事件流}& \multicolumn{3}{p{12cm}}{1.网址URL 输入错误，打开平台首页失败；\newline
+		2.用户账号或密码错误，登录失败。
+	} \\ \hline
+	\textbf{后置条件}& \multicolumn{3}{p{12cm}}{页面由登录页面回到首页，用户登录状态为已登录。} \\ \shline
+\end{longtable}
+
+\begin{longtable}[c]{c|ccc}
+	\caption{查看近期关注用例表}
+	\label{tab:tab8}\\
+	\shline
+	\multicolumn{1}{c|}{\textbf{用例编号}} & \multicolumn{1}{c|}{UC-01} & \multicolumn{1}{c|}{用例名称} &  用户登录\\ \hline
+	\endhead
+	%
+	\multicolumn{1}{c|}{\textbf{活动者}} & \multicolumn{1}{c|}{用户} & \multicolumn{1}{c|}{优先级} &高  \\ \hline
+	\textbf{用例描述} & \multicolumn{3}{p{12cm}}{该用例用来描述用户打开平台首页页面后，状态为未登录的用户通过输入账号和密码进行登录操作，系统将在登录过程中对用户账号及密码的正确性进行验证，并判断用户为个人用户还是企业用户，在登录后根据不同的账号类型在部分页面进行不同的页面显示。} \\ \hline
+	\textbf{前置条件}& \multicolumn{3}{p{12cm}}{用户通过浏览器输入平台地址。} \\ \hline
+	\textbf{基本事件流}& \multicolumn{3}{p{12cm}}{用户打开浏览器，在地址栏输入平台网址；\newline
+		打开平台，展示平台首页；\newline
+		用户账号为未登录状态，点击登录；\newline
+		展示登录页面；\newline
+		输入用户账号和密码进行验证。} \\ \hline
+	\textbf{异常事件流}& \multicolumn{3}{p{12cm}}{1.网址URL 输入错误，打开平台首页失败；\newline
+		2.用户账号或密码错误，登录失败。
+	} \\ \hline
+	\textbf{后置条件}& \multicolumn{3}{p{12cm}}{页面由登录页面回到首页，用户登录状态为已登录。} \\ \shline
+\end{longtable}
+
+\begin{longtable}[c]{c|ccc}
+	\caption{查看历史分析报告用例表}
+	\label{tab:tab9}\\
+	\shline
+	\multicolumn{1}{c|}{\textbf{用例编号}} & \multicolumn{1}{c|}{UC-01} & \multicolumn{1}{c|}{用例名称} &  用户登录\\ \hline
+	\endhead
+	%
+	\multicolumn{1}{c|}{\textbf{活动者}} & \multicolumn{1}{c|}{用户} & \multicolumn{1}{c|}{优先级} &高  \\ \hline
+	\textbf{用例描述} & \multicolumn{3}{p{12cm}}{该用例用来描述用户打开平台首页页面后，状态为未登录的用户通过输入账号和密码进行登录操作，系统将在登录过程中对用户账号及密码的正确性进行验证，并判断用户为个人用户还是企业用户，在登录后根据不同的账号类型在部分页面进行不同的页面显示。} \\ \hline
+	\textbf{前置条件}& \multicolumn{3}{p{12cm}}{用户通过浏览器输入平台地址。} \\ \hline
+	\textbf{基本事件流}& \multicolumn{3}{p{12cm}}{用户打开浏览器，在地址栏输入平台网址；\newline
+		打开平台，展示平台首页；\newline
+		用户账号为未登录状态，点击登录；\newline
+		展示登录页面；\newline
+		输入用户账号和密码进行验证。} \\ \hline
+	\textbf{异常事件流}& \multicolumn{3}{p{12cm}}{1.网址URL 输入错误，打开平台首页失败；\newline
+		2.用户账号或密码错误，登录失败。
+	} \\ \hline
+	\textbf{后置条件}& \multicolumn{3}{p{12cm}}{页面由登录页面回到首页，用户登录状态为已登录。} \\ \shline
+\end{longtable}
+
+\begin{longtable}[c]{c|ccc}
+	\caption{查看预警详情用例表}
+	\label{tab:tab10}\\
+	\shline
+	\multicolumn{1}{c|}{\textbf{用例编号}} & \multicolumn{1}{c|}{UC-01} & \multicolumn{1}{c|}{用例名称} &  用户登录\\ \hline
+	\endhead
+	%
+	\multicolumn{1}{c|}{\textbf{活动者}} & \multicolumn{1}{c|}{用户} & \multicolumn{1}{c|}{优先级} &高  \\ \hline
+	\textbf{用例描述} & \multicolumn{3}{p{12cm}}{该用例用来描述用户打开平台首页页面后，状态为未登录的用户通过输入账号和密码进行登录操作，系统将在登录过程中对用户账号及密码的正确性进行验证，并判断用户为个人用户还是企业用户，在登录后根据不同的账号类型在部分页面进行不同的页面显示。} \\ \hline
+	\textbf{前置条件}& \multicolumn{3}{p{12cm}}{用户通过浏览器输入平台地址。} \\ \hline
+	\textbf{基本事件流}& \multicolumn{3}{p{12cm}}{用户打开浏览器，在地址栏输入平台网址；\newline
+		打开平台，展示平台首页；\newline
+		用户账号为未登录状态，点击登录；\newline
+		展示登录页面；\newline
+		输入用户账号和密码进行验证。} \\ \hline
+	\textbf{异常事件流}& \multicolumn{3}{p{12cm}}{1.网址URL 输入错误，打开平台首页失败；\newline
+		2.用户账号或密码错误，登录失败。
+	} \\ \hline
+	\textbf{后置条件}& \multicolumn{3}{p{12cm}}{页面由登录页面回到首页，用户登录状态为已登录。} \\ \shline
+\end{longtable}
+
+\subsection{个人用户页面}
+
+\subsection{企业用户页面}
